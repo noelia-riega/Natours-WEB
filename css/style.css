@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-fit: fill;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+form,
+input,
+textarea,
+label,
+button,
+fieldset,
+legend,
+select {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+:root {
+  font-size: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1, 7;
+  color: #777;
+  padding: 1.875rem;
+
+  /* --font-main:'Raleway', sans-serif;/*Tipografia principal*/
+  /* --font-sec: 'Poppins', sans-serif;/*Tipografia secundaria*/
+  /* --bg-color:  #dddbcb; Color background principal */
+  /* --main-color:  #fffffa; Color principal de textos grandes y otras cosas */
+  /* --text-color: #101314;   Color principal de textos parrafos y otras cosas */
+  /* --acent-color: #ff0080; Color principal tipo "acento" */
+}
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+.header {
+  height: 95vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.8),
+      hsla(160, 64%, 43%, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+}
+
+.logo {
+}
