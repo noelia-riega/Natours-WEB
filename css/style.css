@@ -194,19 +194,15 @@ Dark green: #28b485
   }
 }
 
-.btn,
 .btn:link,
 .btn:visited {
-  position: relative;
-
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.9375rem 2.5rem;
   border-radius: 6.25rem;
-
   display: inline-block;
-
   transition: all 0.2s;
+  position: relative;
 }
 
 .btn:hover {
@@ -229,7 +225,7 @@ Dark green: #28b485
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 10rem;
+  border-radius: 6.25rem;
   position: absolute;
   top: 0;
   left: 0;
