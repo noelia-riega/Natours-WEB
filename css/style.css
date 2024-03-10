@@ -73,7 +73,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1, 7;
+  line-height: 3rem;
   color: #777;
   padding: 1.875rem;
 
@@ -118,7 +118,7 @@ Dark green: #28b485
 }
 
 .logo {
-  height: 2.1875rem.;
+  height: 2.1875rem;
 }
 
 .tex-box {
@@ -131,7 +131,10 @@ Dark green: #28b485
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden;
 }
+
 .heading-primary-main {
   width: 100%;
 
@@ -139,7 +142,9 @@ Dark green: #28b485
   font-size: 3.75rem;
   font-weight: 400;
   letter-spacing: 2.1875rem;
+  animation: moveInLeft 2s ease-out;
 }
+
 .heading-primary-sub {
   width: 100%;
 
@@ -147,4 +152,33 @@ Dark green: #28b485
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 1.1rem;
+  animation: moveInRight 2s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
