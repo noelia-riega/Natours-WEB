@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+p a {
+  display: inline;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-fit: fill;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+form,
+input,
+textarea,
+label,
+button,
+fieldset,
+legend,
+select {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+:root {
+  font-size: 100%;
+}
+
+html {
+  //this defines what 1 rem is
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
