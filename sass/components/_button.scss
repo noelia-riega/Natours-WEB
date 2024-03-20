@@ -62,10 +62,18 @@
     text-decoration: none;
     border-bottom: 0.0625rem solid $color-primary;
     padding: 0.1875rem;
+    transition: all 0.2s;
   }
+
   &:hover {
-    color: $color-primary;
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    transform: translateY(-2px);
   }
+
   &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+    transform: translateY(0);
   }
 }
