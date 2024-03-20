@@ -32,37 +32,6 @@ p a {
   display: inline;
 }
 
-img,
-video,
-iframe {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-fit: fill;
-}
-
-svg {
-  display: block;
-  fill: currentColor;
-}
-
-form,
-input,
-textarea,
-label,
-button,
-fieldset,
-legend,
-select {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
 :root {
   font-size: 100%;
 }
@@ -220,7 +189,7 @@ body {
 }
 .composition__photo:hover {
   outline: 1.5rem solid #55c57a;
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-0.5rem);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
