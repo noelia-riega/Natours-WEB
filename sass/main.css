@@ -135,13 +135,13 @@ body {
 }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .paragraph:not(:last-child) {
   margin-bottom: 1.875rem;
