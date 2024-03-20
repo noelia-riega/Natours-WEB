@@ -169,32 +169,32 @@ body {
 .composition__photo {
   width: 55%;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-  border-radius: 0.125rem;
-  outline-offset: 2rem;
+  border-radius: 0.3125rem;
+  outline-offset: 1rem;
   position: absolute;
   z-index: 10;
   transition: all 0.2s;
 }
 .composition__photo--p1 {
   left: 0;
-  top: -2rem;
+  top: -1rem;
 }
 .composition__photo--p2 {
   right: 0;
-  top: 2rem;
+  top: 1rem;
 }
 .composition__photo--p3 {
   left: 20%;
-  top: 10rem;
+  top: 8rem;
 }
 .composition__photo:hover {
-  outline: 1.5rem solid #55c57a;
-  transform: scale(1.05) translateY(-0.5rem);
+  outline: 0.625rem solid #55c57a;
+  transform: scale(1.15) translateY(-0.5rem);
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
 .composition__photo:hover .composition__photo__photo:not(:hover) {
-  transform: scale(0.95);
+  transform: scale(0.9);
 }
 
 .btn:link, .btn:visited {
@@ -266,6 +266,28 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+
+.row {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-2:not(:last-child) {
+  margin-right: 6rem;
 }
 
 .header {
