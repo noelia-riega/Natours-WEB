@@ -32,6 +32,37 @@ p a {
   display: inline;
 }
 
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-fit: fill;
+}
+
+svg {
+  display: block;
+  fill: currentColor;
+}
+
+form,
+input,
+textarea,
+label,
+button,
+fieldset,
+legend,
+select {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
 :root {
   font-size: 100%;
 }
