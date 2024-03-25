@@ -194,12 +194,19 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+
 .card {
   height: 35rem;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  margin-top: 5rem;
 }
 .card__side {
   width: 100%;
@@ -219,7 +226,6 @@ body {
   background-color: #fff;
 }
 .card__side--back {
-  background-color: greenyellow;
   transform: rotateY(180deg);
 }
 .card__side--back-1 {
@@ -243,15 +249,17 @@ body {
   background-blend-mode: screen;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .card__picture--1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
 }
 .card__picture--2 {
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
 }
 .card__picture--3 {
-  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
 }
 .card__heading {
   width: 70%;
@@ -272,6 +280,12 @@ body {
 .card__heading-span--1 {
   background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85));
 }
+.card__heading-span--2 {
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+.card__heading-span--3 {
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85));
+}
 .card__details ul {
   width: 80%;
   margin: 0 auto;
@@ -284,6 +298,28 @@ body {
 }
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #eee;
+}
+.card__cta {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.card__price--box {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #fff;
+}
+.card__price--only {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.card__price--value {
+  font-size: 5rem;
+  font-weight: 100;
 }
 
 .feature-box {
@@ -346,7 +382,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   padding: 0.9375rem 2.5rem;
-  border-radius: 6.25rem;
+  border-radius: 6rem;
   display: inline-block;
   transition: all 0.2s;
   position: relative;
@@ -366,9 +402,18 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+  font-size: 1rem;
 }
 .btn--white::after {
   background-color: #fff;
+}
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+  font-size: 1rem;
+}
+.btn--green::after {
+  background-color: #55c57a;
 }
 .btn::after {
   content: "";
@@ -426,7 +471,7 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem;
 }
 
@@ -450,16 +495,16 @@ body {
   float: left;
 }
 .row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
+  width: calc((100% - 7rem) / 2);
 }
 .row .col-1-of-2:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: 7rem;
 }
 .row .col-1-of-3 {
-  width: calc((100% - 2 * 6rem) / 3);
+  width: calc((100% - 2 * 7rem) / 3);
 }
 .row .col-1-of-4 {
-  width: calc((100% - 3 * 6rem) / 4);
+  width: calc((100% - 3 * 7rem) / 4);
 }
 
 .header {

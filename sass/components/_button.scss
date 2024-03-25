@@ -4,7 +4,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding: 0.9375rem 2.5rem;
-    border-radius: 6.25rem;
+    border-radius: 6rem;
     display: inline-block;
     transition: all 0.2s;
     position: relative;
@@ -28,9 +28,20 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+    font-size: 1rem;
 
     &::after {
       background-color: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 1rem;
+
+    &::after {
+      background-color: $color-primary;
     }
   }
 
