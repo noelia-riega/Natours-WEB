@@ -2,9 +2,9 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: $color-grey-dark;
-  padding: 1.875rem;
+  padding: 1rem;
 }
 
 .heading-primary {
@@ -34,7 +34,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;

@@ -47,22 +47,6 @@ svg {
   fill: currentColor;
 }
 
-form,
-input,
-textarea,
-label,
-button,
-fieldset,
-legend,
-select {
-  display: block;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
 :root {
   font-size: 100%;
 }
@@ -122,9 +106,9 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 3rem;
+  line-height: 2.5rem;
   color: #777;
-  padding: 1.875rem;
+  padding: 1rem;
 }
 
 .heading-primary {
@@ -150,7 +134,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -200,6 +184,45 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.form__input {
+  width: 100%;
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+}
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #55c57a;
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid #ff7730;
+}
+.form__input::-webkit-input-placeholder {
+  color: #999;
+}
+.form__label {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: block;
+  transition: all 0.4s;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
 }
 
 .bg-video {
@@ -547,6 +570,25 @@ body {
 .section-stories {
   padding: 8rem 0;
   position: relative;
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-11.jpg);
+  background-size: 100%;
+  margin: 0 auto;
+  width: 80%;
+  height: 31rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+.book__form {
+  width: 50%;
+  padding: 6rem;
 }
 
 .row {
