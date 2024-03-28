@@ -1,6 +1,10 @@
 .form {
+  &__group {
+    gap: 1rem;
+  }
+
   &__group:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
   }
   &__input {
     width: 80%;
@@ -8,7 +12,7 @@
 
     font-family: inherit;
     font-size: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border-radius: 2px;
     background-color: rgba($color-white, 0.5);
     border: none;
@@ -41,6 +45,53 @@
   &__input:placeholder-shown + &__label {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-4rem);
+    transform: translateY(-2rem);
+  }
+
+  &__radio-group {
+    width: 40%;
+    display: inline-block;
+  }
+
+  &__radio-input {
+    display: none;
+  }
+
+  &__radio-label {
+    font-size: $default-font-size;
+    cursor: pointer;
+    padding-left: 2.5rem;
+    position: relative;
+  }
+
+  &__radio-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+
+    display: inline-block;
+    position: absolute;
+    left: 0rem;
+    top: 0.5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.7rem;
+      width: 0.7rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
   }
 }
