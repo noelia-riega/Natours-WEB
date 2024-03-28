@@ -190,7 +190,7 @@ body {
 }
 
 .form__group {
-  gap: 1rem;
+  gap: 4rem;
 }
 .form__group:not(:last-child) {
   margin-bottom: 0.6rem;
