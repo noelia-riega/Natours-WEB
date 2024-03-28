@@ -34,7 +34,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -51,6 +51,10 @@ body {
   &:hover {
     transform: skewY(5deg) skewX(5deg);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  }
+
+  &__booking {
+    font-size: 2rem;
   }
 }
 
