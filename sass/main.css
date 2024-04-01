@@ -641,6 +641,15 @@ body {
   padding: 2rem;
 }
 
+.navigation__background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+}
 .footer {
   color: #f7f7f7;
   background-color: #333;
