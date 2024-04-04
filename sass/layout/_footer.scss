@@ -4,12 +4,20 @@
   padding: 8rem 0;
   font-size: 1.2rem;
 
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+
   &__logo-box {
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
     padding: 4rem;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
   }
 
   &__logo {
@@ -22,6 +30,11 @@
     border-top: 1px solid $color-grey-dark;
     padding-top: 1rem;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding-top: 0;
+    }
   }
 
   &__list {
@@ -34,6 +47,12 @@
     flex-flow: row nowrap;
     justify-content: space-around;
     font-size: 1rem;
+
+    @include respond(tab-port) {
+      margin: 3rem;
+      flex-flow: row wrap;
+      gap: 1rem;
+    }
 
     &:not(:last-child) {
       margin-right: 1rem;
@@ -63,5 +82,12 @@
   &__copyright {
     border-top: 1px solid $color-grey-dark;
     padding-top: 1rem;
+
+    @include respond(tab-port) {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      float: none;
+    }
   }
 }

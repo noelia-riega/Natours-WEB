@@ -12,6 +12,8 @@ $breakpoint argument choices:
 -big-desktop 
 
 1em = 16px
+
+ORDER media query : base + typography > general layout + grid > page layout > components
 */
 *,
 *::after,
@@ -90,6 +92,11 @@ body {
   box-sizing: border-box;
   padding: 3rem;
 }
+@media (max-width: 56.25em) {
+  body {
+    padding: 0rem;
+  }
+}
 
 ::selection {
   background-color: #55c57a;
@@ -138,7 +145,6 @@ body {
   font-size: 1rem;
   line-height: 2.5rem;
   color: #777;
-  padding: 1rem;
 }
 
 .heading-primary {
@@ -153,6 +159,13 @@ body {
   letter-spacing: 2.1875rem;
   animation: moveInLeft 2s ease-out;
 }
+@media (max-width: 37.5em) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
 .heading-primary--sub {
   width: 100%;
   display: block;
@@ -161,6 +174,12 @@ body {
   letter-spacing: 1.1rem;
   animation: moveInRight 2s ease-out;
   margin-bottom: 3.75rem;
+}
+@media (max-width: 37.5em) {
+  .heading-primary--sub {
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+  }
 }
 
 .heading-secondary {
@@ -173,6 +192,16 @@ body {
   color: transparent;
   letter-spacing: 0.125rem;
   transition: all 0.2s;
+}
+@media (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 1.6rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewY(5deg) skewX(5deg);
@@ -766,6 +795,18 @@ body {
   text-align: center;
   cursor: pointer;
 }
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 2rem;
+    right: 4rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation__button {
+    top: 1rem;
+    right: 4rem;
+  }
+}
 .navigation__background {
   height: 4rem;
   width: 4rem;
@@ -776,6 +817,18 @@ body {
   z-index: 11;
   background-image: radial-gradient(#7ed56f, #28b485);
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 3rem;
+    right: 4.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .navigation__background {
+    top: 2rem;
+    right: 4.5rem;
+  }
 }
 .navigation__nav {
   height: 100vh;
@@ -873,12 +926,22 @@ body {
   padding: 8rem 0;
   font-size: 1.2rem;
 }
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 6rem 0;
+  }
+}
 .footer__logo-box {
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
   padding: 4rem;
+}
+@media (max-width: 56.25em) {
+  .footer__logo-box {
+    padding: 2rem;
+  }
 }
 .footer__logo {
   width: 10rem;
@@ -890,6 +953,12 @@ body {
   padding-top: 1rem;
   display: inline-block;
 }
+@media (max-width: 56.25em) {
+  .footer__navigation {
+    width: 100%;
+    padding-top: 0;
+  }
+}
 .footer__list {
   width: 100%;
   margin: 0.5rem;
@@ -899,6 +968,13 @@ body {
   flex-flow: row nowrap;
   justify-content: space-around;
   font-size: 1rem;
+}
+@media (max-width: 56.25em) {
+  .footer__item {
+    margin: 3rem;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
 }
 .footer__item:not(:last-child) {
   margin-right: 1rem;
@@ -923,6 +999,14 @@ body {
   border-top: 1px solid #777;
   padding-top: 1rem;
 }
+@media (max-width: 56.25em) {
+  .footer__copyright {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    float: none;
+  }
+}
 
 .row {
   max-width: 80rem;
@@ -932,8 +1016,20 @@ body {
   justify-content: space-evenly;
   align-content: center;
 }
+@media (max-width: 56.25em) {
+  .row {
+    display: block;
+    max-width: 40rem;
+    padding: 0 3rem;
+  }
+}
 .row:not(:last-child) {
   margin-bottom: 8rem;
+}
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
 .row::after {
   content: "";
@@ -943,11 +1039,23 @@ body {
 .row [class^=col-] {
   float: left;
 }
+.row [class^=col-]:not(:last-child) {
+  margin-right: 7rem;
+  margin-bottom: 6rem;
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    width: 100% !important;
+    margin-right: 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .row [class^=col-] {
+    width: 100% !important;
+  }
+}
 .row .col-1-of-2 {
   width: calc((100% - 7rem) / 2);
-}
-.row .col-1-of-2:not(:last-child) {
-  margin-right: 7rem;
 }
 .row .col-1-of-3 {
   width: calc((100% - 2 * 7rem) / 3);
@@ -964,6 +1072,12 @@ body {
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+@media (max-width: 37.5em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 }
 .header__logo-box {
   width: 5rem;
