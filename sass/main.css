@@ -966,8 +966,10 @@ body {
 }
 @media (max-width: 37.5em) {
   .navigation__button {
+    height: 4rem;
+    width: 4rem;
     top: 1rem;
-    right: 4rem;
+    right: 1rem;
   }
 }
 .navigation__background {
@@ -989,8 +991,10 @@ body {
 }
 @media (max-width: 37.5em) {
   .navigation__background {
-    top: 2rem;
-    right: 4.5rem;
+    height: 3rem;
+    width: 3rem;
+    top: 1rem;
+    right: 1.5rem;
   }
 }
 .navigation__nav {
@@ -1047,11 +1051,21 @@ body {
   position: relative;
   margin-top: 2.5rem;
 }
+@media (max-width: 37.5em) {
+  .navigation__icon {
+    margin-top: 2rem;
+  }
+}
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 2.5rem;
   height: 2px;
   background-color: #333;
   display: inline-block;
+}
+@media (max-width: 37.5em) {
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2rem;
+  }
 }
 .navigation__icon::before, .navigation__icon::after {
   content: "";
@@ -1247,6 +1261,11 @@ body {
   position: absolute;
   top: 2.5rem;
   left: 2.5rem;
+}
+@media (max-width: 37.5em) {
+  .header__logo-box {
+    width: 3.5rem;
+  }
 }
 .header__logo {
   height: 2.1875rem;
